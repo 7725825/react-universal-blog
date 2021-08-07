@@ -1,4 +1,5 @@
 FROM node:14-alpine
 COPY . ./
-RUN npm install --production
-CMD ["npm", "start"]
+ENV NODE_ENV $NODE_ENV
+RUN npm install
+CMD ["npm", "run"]
